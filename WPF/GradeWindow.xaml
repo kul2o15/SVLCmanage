@@ -1,0 +1,53 @@
+﻿<Window x:Class="SVLCmanage.GradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SVLCmanage"
+        mc:Ignorable="d"
+        Height="656.433" Width="979.35" WindowStartupLocation="CenterScreen" Background="{StaticResource WinSkin}" Closed="Window_Closed" Icon="/SVLCmanage;component/Image/svlclogo.ico" Loaded="Window_Loaded">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.DataContext>
+            <local:DataValidationClass/>
+        </Grid.DataContext>
+        <Grid.Background>
+            <ImageBrush  ImageSource="/SVLCmanage;component/Image/noise.png" Viewport="0,0 128,128" ViewportUnits="Absolute" TileMode="Tile" Opacity="0.3" />
+        </Grid.Background>
+        <Grid Margin="27,22,0,0" Height="578" VerticalAlignment="Top" HorizontalAlignment="Left" Width="802">
+            <Rectangle Style="{StaticResource GroupGlass}">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Label x:Name="label16_Copy" Content="ເກັບຄະແນນ" Height="30" VerticalAlignment="Top" Margin="0,10,345,0" FontSize="16" Foreground="#FFCCD9DA" HorizontalAlignment="Right" Width="86"/>
+            <DataGrid x:Name="dataGrid" Margin="238,164,10,10" IsEnabled="{Binding IsValidSave2}">
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="Background" Value="{StaticResource Glasskin}"/>
+                        <Setter Property="Foreground" Value="#FFCCD9DA"/>
+                        <EventSetter Event="Control.MouseDoubleClick" Handler="DataGrid_MouseDoubleClick"/>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+            <TextBlock x:Name="textcount" Margin="0,129,10,419" FontSize="13.333" Foreground="#FF6C7374" TextAlignment="Right" FontFamily="Phetsarath OT" HorizontalAlignment="Right" Width="116"/>
+            <TextBlock x:Name="textSubName" Margin="0,58,131,437" FontSize="14.667" Foreground="#FFDED7D7" FontFamily="Phetsarath OT" HorizontalAlignment="Right" Width="548" TextAlignment="Center"/>
+            <Button x:Name="BtnOther" Content="ເລືອກນັກສືກສາ" Margin="109,170,0,0" Height="30" VerticalAlignment="Top" Click="BtnOther_Click" HorizontalAlignment="Left" Width="116"/>
+            <TextBox x:Name="txtTeacher" Text="{Binding SubjectTeach, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="28" Margin="0,0,577,275" TextWrapping="Wrap"  VerticalAlignment="Bottom"  TabIndex="8" HorizontalAlignment="Right" Width="117"/>
+            <Label x:Name="label1_Copy3" Content="ອາຈານປະຈຳວິຊາ" Margin="0,0,699,277" FontSize="13.333" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="93"/>
+            <TextBox x:Name="txtTYear" Text="{Binding SubjectTYear, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="28" Margin="0,0,577,327" TextWrapping="Wrap"  VerticalAlignment="Bottom"  TabIndex="7" HorizontalAlignment="Right" Width="117"/>
+            <Label x:Name="label1_Copy4" Content="ສົກປີ" Margin="0,0,699,327" FontSize="13.333" Height="28" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="34"/>
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="64" Margin="867,536,0,0" VerticalAlignment="Top" Width="73">
+            <Rectangle Style="{StaticResource GroupGlass}" HorizontalAlignment="Left" Height="58.5" VerticalAlignment="Top" Width="69">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Button x:Name="btnBack" Content="ກັບໜ້າຫຼັກ" HorizontalAlignment="Left" Width="69" Height="58.5" VerticalAlignment="Top" Click="btnBack_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

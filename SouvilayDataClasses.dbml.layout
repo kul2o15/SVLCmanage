@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SouvilayDataClasses">
+  <DataContextMoniker Name="/SouvilayDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="345e7645-1e0b-4d8f-81ce-20d2c50c5bd3" isExpanded="false" absoluteBounds="3.25, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/subject" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d505b94-d180-4a13-b74a-4856bd6fc724" absoluteBounds="3.265, 1.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26376196-c76a-4ae9-925f-6bf0c03ac2ee" isExpanded="false" absoluteBounds="0.875, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/auth" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d4cf1ad-32cb-46af-a685-dfc8187c9ebc" absoluteBounds="0.89000000000000012, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="558e0988-2568-4ac0-9687-4b22c5ed0aa0" isExpanded="false" absoluteBounds="1, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/cost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bed7c980-ae55-495c-b025-36f121913a16" absoluteBounds="1.0150000000000001, 1.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7f80570-2489-4517-a4fb-913b6612bcde" absoluteBounds="3.375, 1.5, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/grade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44490992-898b-41ac-98bb-05a1843aa69e" absoluteBounds="3.3899999999999997, 1.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="872df635-c31d-4034-9857-3d6e12d129b8" isExpanded="false" absoluteBounds="1, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/login" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40644013-0a25-40f3-adbe-ba17a0b6c5fd" absoluteBounds="1.0150000000000001, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f26db69-9730-4946-8224-2f47e3b90c28" absoluteBounds="5.625, 1.625, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/SouvilayDataClassesDataContext/student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b390008c-2248-495e-909c-ca40408a128f" absoluteBounds="5.64, 2.085, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

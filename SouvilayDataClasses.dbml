@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Soudvilay" Class="SouvilayDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.99,1433;Initial Catalog=Soudvilay;User ID=sa" SettingsObjectName="SVLCmanage.Properties.Settings" SettingsPropertyName="SoudvilayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.subject" Member="subjects">
+    <Type Name="subject">
+      <Column Name="subject_id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="subject_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="subject_engname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="subject_credit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subject_hour" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="degree12plus4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="degree11plus3plus3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="degree12plus3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.auth" Member="auths">
+    <Type Name="auth">
+      <Column Name="user_id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="user_auth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cost" Member="costs">
+    <Type Name="cost">
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="student_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term5" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term6" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term7" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="term8" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.grade" Member="grades">
+    <Type Name="grade">
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="student_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="teacher_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="grade_total" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="grade_grade" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="grade_average" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="subject_tyear" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="grade_typer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.login" Member="logins">
+    <Type Name="login">
+      <Column Name="[index]" Member="index" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username_ip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="logintime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.student" Member="students">
+    <Type Name="student">
+      <Column Name="student_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="student_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_engname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_birthday" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_addressbirth" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_degree" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_major" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_timestudy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_year" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_yearend" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_info" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_pic" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="student_classroom" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

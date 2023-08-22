@@ -1,0 +1,24 @@
+﻿<Window x:Class="SVLCmanage.DialogBox.LogDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SVLCmanage.DialogBox"
+        mc:Ignorable="d"
+       Height="488.096" Width="417.519" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow"  Background="{StaticResource MenuItemSelectionFill}" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid x:Name="LayoutRoot">
+        <Grid Margin="10,10,10,0" Height="440" VerticalAlignment="Top">
+            <DataGrid x:Name="DataGrid" Margin="10,44,10,0" Height="386" VerticalAlignment="Top" >
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="Background" Value="{StaticResource Glasskin}"/>
+                        <Setter Property="Foreground" Value="#FFCCD9DA"/>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+            <Label x:Name="label15" Content="ບັນທືກການເຂົ້າໃຊ້" Height="28" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="13.333" Foreground="#FF6C7374" HorizontalAlignment="Left" Width="136"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

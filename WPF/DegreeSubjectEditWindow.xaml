@@ -1,0 +1,112 @@
+﻿<Window x:Class="SVLCmanage.DegreeSubjectEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SVLCmanage"
+        mc:Ignorable="d"
+        Height="651.933" Width="1182.225" WindowStartupLocation="CenterScreen" Background="{StaticResource WinSkin}" Closed="Window_Closed" Icon="/SVLCmanage;component/Image/svlclogo.ico">
+    
+    <Grid  x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush  ImageSource="/SVLCmanage;component/Image/noise.png" Viewport="0,0 128,128" ViewportUnits="Absolute" TileMode="Tile" Opacity="0.3" />
+        </Grid.Background>
+        <Grid Margin="348,22,0,0" HorizontalAlignment="Left" Width="802" Height="343" VerticalAlignment="Top">
+            <Rectangle Style="{StaticResource GroupGlass}" >
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Button x:Name="BtnSave" Content="ບັນທືກ" Margin="0,296.473,24.5,0" HorizontalAlignment="Right" Width="99" Height="30.36" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" Click="BtnSave_Click" TabIndex="10"/>
+            <Grid Background="{StaticResource ResourceKey=Glasskin}" Margin="28,0,24.5,63.162" Height="254.338" VerticalAlignment="Bottom">
+                <Label x:Name="label4" Content="ແກ້ໄຂວິຊາ" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="110"/>
+                <TextBox x:Name="txtSubId" Text="{Binding Path=subject_id}" Height="27" Margin="10,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" KeyDown="txtSubId_KeyDown" TabIndex="2" />
+                <Label x:Name="label1_Copy7" Content="ລະຫັດວິຊາ" HorizontalAlignment="Left" Width="67.5" Margin="10,71,0,0" FontSize="13.333" Height="30" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtSubName" Text="{Binding Path=subject_name}" Margin="141,104,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="175"  Height="27" VerticalAlignment="Top" KeyDown="txtSubName_KeyDown" TabIndex="3"/>
+                <Label x:Name="label1_Copy13" Content="ຊື່ວິຊາ" HorizontalAlignment="Left" Width="39" Margin="141,71,0,0" FontSize="13.333" Height="30" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtSubEngName" Text="{Binding Path=subject_engname}" Margin="349,104,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="174"  Height="27" VerticalAlignment="Top" TabIndex="4"/>
+                <Label x:Name="label1_Copy" Content="ຊື່ວິຊາພາສາອັງກິດ" Margin="350,71,297.5,0" FontSize="13.333" Height="30" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtSubCredit" local:NumbericOnlyClass.IsNumeric="True" Margin="557,104,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="42" MaxLength="1" Height="27" VerticalAlignment="Top" TabIndex="5"/>
+                <Label x:Name="label1_Copy1" Content="ໜ່ວຍກິດ" Margin="0,71,142.5,0" FontSize="13.333" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="59"/>
+                <TextBox x:Name="txtSubHour" Text="{Binding Path=subject_hour}" Margin="635,104,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="92"  Height="27" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" TabIndex="6"/>
+                <Label x:Name="label1_Copy2"  Content="ຊົ່ວໂມງສອນ" Margin="0,71,43.5,0" FontSize="13.333" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="71" RenderTransformOrigin="0.775,0.533"/>
+                <ComboBox x:Name="comboBoxDegree12plus4"  Height="26" Margin="113.521,198,0,0" VerticalAlignment="Top" Foreground="#FFCCD9DA" FontSize="13.333" FontFamily="Phetsarath OT" HorizontalAlignment="Left" Width="94" d:LayoutOverrides="HorizontalAlignment" TabIndex="7">
+                    <ComboBoxItem Content="ບໍ່ມີໃນຫຼັກສູດ"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ1"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ2"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ3"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ4"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ5"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ6"/>
+                    <ComboBoxItem Content="ປີ4 ເທີມ7"/>
+                    <ComboBoxItem Content="ປີ4 ເທີມ8"/>
+
+                </ComboBox>
+                <Label x:Name="label1_Copy3" Content="ຫຼັກສູດປະລີນຍາຕີ (12+4)" HorizontalAlignment="Left" Width="140.5" Margin="110.521,0,0,55.338" FontSize="13.333" Height="30" VerticalAlignment="Bottom"/>
+                <ComboBox x:Name="comboBoxDegree11plus3plus3"  Height="26" Margin="300.521,198,0,0" VerticalAlignment="Top" Foreground="#FFCCD9DA" FontSize="13.333" FontFamily="Phetsarath OT" HorizontalAlignment="Left" Width="94" TabIndex="8">
+                    <ComboBoxItem Content="ບໍ່ມີໃນຫຼັກສູດ"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ1"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ2"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ3"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ4"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ5"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ6"/>
+                    <ComboBoxItem Content="ປີ4 ເທີມ7"/>
+                    <ComboBoxItem Content="ປີ4 ເທີມ8"/>
+                    <ComboBoxItem Content="ປີ5 ເທີມ 9"/>
+                    <ComboBoxItem Content="ປີ5 ເທີມ10"/>
+                </ComboBox>
+                <Label x:Name="label1_Copy4" Content="ຫຼັກສູດປະລີນຍາຕີ (11+3+3)" Margin="297.521,0,298.118,55.338" FontSize="13.333" Height="30" VerticalAlignment="Bottom"/>
+                <ComboBox x:Name="comboBoxDegree12plus3"  Height="26" Margin="494,198,0,0" VerticalAlignment="Top" Foreground="#FFCCD9DA" FontSize="13.333" FontFamily="Phetsarath OT" HorizontalAlignment="Left" Width="94" TabIndex="9">
+                    <ComboBoxItem Content="ບໍ່ມີໃນຫຼັກສູດ"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ1"/>
+                    <ComboBoxItem Content="ປີ1 ເທີມ2"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ3"/>
+                    <ComboBoxItem Content="ປີ2 ເທີມ4"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ5"/>
+                    <ComboBoxItem Content="ປີ3 ເທີມ6"/>
+
+                </ComboBox>
+                <Label x:Name="label1_Copy5" Content="ຫຼັກສູດຊັ້ນສູງ (12+3)" Margin="0,0,116.639,55.338" FontSize="13.333" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="140.5"/>
+            </Grid>
+            <Label x:Name="label1_Copy14" Content="ກະລຸນາພິມລະຫັດວິຊາ ຫຼື ຊື່ວິຊາ ແລ້ວກົດ Enter ເພື່ອຊອກຫາວິຊານັ້ນ" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="350" Margin="52,62,0,0" FontSize="13.333" Foreground="#FF6C7374"/>
+        </Grid>
+        <Grid Margin="27,22,0,0" Height="578" VerticalAlignment="Top" HorizontalAlignment="Left" Width="294">
+            <Rectangle Style="{StaticResource GroupGlass}">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Label x:Name="label16_Copy" Content="ຄົ້ນຫາວິຊາໃນຫຼັກສູດ" Height="30" VerticalAlignment="Top" Margin="10,24,148,0" FontSize="16" Foreground="#FFCCD9DA"/>
+            <DataGrid x:Name="DataGrid" Margin="10,166,10,10" >
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="Background" Value="{StaticResource Glasskin}"/>
+                        <Setter Property="Foreground" Value="#FFCCD9DA"/>
+                        <EventSetter Event="MouseDoubleClick" Handler="DataGrid_MouseDoubleClick"/>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+            <ComboBox x:Name="comboBoxDegree"  Height="26" Margin="151,28,0,0" VerticalAlignment="Top" Foreground="#FFCCD9DA" FontSize="13.333" FontFamily="Phetsarath OT" HorizontalAlignment="Left" Width="128"  IsDropDownOpen="True" DropDownClosed="comboBoxDegree_DropDownClosed">
+
+                <ComboBoxItem Content="ບໍ່ໄດ້ຢູ່ໃນຫຼັກສູດໃດ"/>
+                <ComboBoxItem Content="ປະລິນຍາຕີ"/>
+                <ComboBoxItem Content="ເຊື່ອມຕໍ່"/>
+                <ComboBoxItem Content="ຊັ້ນສູງ"/>
+
+            </ComboBox>
+            <Label x:Name="label15" Content="ດັບເບີຄລີກວິຊາທີ່ຕ້ອງການ" Height="29" VerticalAlignment="Top" Margin="10,132,0,0" FontSize="13.333" Foreground="#FF6C7374" HorizontalAlignment="Left" Width="136"/>
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="48" Margin="1096,552,0,0" VerticalAlignment="Top" Width="54">
+            <Rectangle Style="{StaticResource GroupGlass}" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="54">
+
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Button x:Name="btnBack" Content="ກັບໜ້າຫຼັກ" HorizontalAlignment="Left" Width="54" Height="48" VerticalAlignment="Top" Click="btnBack_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
